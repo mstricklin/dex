@@ -1,4 +1,6 @@
 boto3/
 dynamo/
 *.pyc
-
+*.pem
+credentials.csv
+.*.swp
