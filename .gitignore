@@ -4,3 +4,4 @@ dynamo/
 *.pem
 credentials.csv
 .*.swp
+secret/
