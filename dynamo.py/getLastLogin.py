@@ -6,7 +6,7 @@ import sys, os
 import boto3
 from boto3.dynamodb.conditions import Key, Attr
 import json
-from DecimalEncoder import DecimalEncoder, DecimalDecoder
+from DecimalEncoder import DecimalEncoder
 from decimal import Decimal
 from pprint import pprint
 
