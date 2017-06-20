@@ -1,0 +1,34 @@
+import pycurl
+from StringIO import StringIO
+
+buffer = StringIO()
+c = pycurl.Curl()
+c.setopt(c.URL, 'http://pycurl.io/')
+c.setopt(c.WRITEDATA, buffer)
+c.perform()
+c.close()
+
+body = buffer.getvalue()
+# Body is a string in some encoding.
+# In Python 2, we can print it without knowing what the encoding is.
+print(body)
+
+
+
+#c = pycurl.Curl()
+#c.setopt(pycurl.HTTPHEADER,   'Accept: application/json')
+#c.setopt(pycurl.CONTENT_TYPE, 'application/json')
+#c.setopt(pycurl.USERAGENT,    'Dexcom Share/3.0.2.11 CFNetwork/711.2.23 Darwin/14.0.0')
+
+#c.post(url, 
+
+
+
+import requests
+
+url = 'https://share1.dexcom.com/ShareWebServices/Services/General/LoginPublisherAccountByName'
+headers = {'Content-Type': "application/json",
+           'Accept': "application/json",
+           'User-Agent': 'Dexcom Share/3.0.2.11 CFNetwork/711.2.23 Darwin/14.0.0'}
+data = "{'accountName':'strickli','applicationId':'d8665ade-9673-4e27-9ff6-92db4ce13d13','password': 'Stricklin1'}"
+res = requests.post(url, json=data, headers=headers)

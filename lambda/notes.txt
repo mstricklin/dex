@@ -1,0 +1,6 @@
+
+REST interface using Amazon API Gateway
+
+
+IAM:
+https://344735631651.signin.aws.amazon.com/console

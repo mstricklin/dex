@@ -1,0 +1,23 @@
+// describe table
+var params = {
+        TableName: 'Dex',
+};
+dynamodb.describeTable(params, function(err, data) {
+        if (err) ppJson(err); // an error occurred
+        else ppJson(data); // successful response
+});
+
+
+// list tables
+var params = { };
+dynamodb.listTables(params, function(err, data) {
+        if (err) ppJson(err); // an error occurred
+        else ppJson(data); // successful response
+});
+
+// scan table
+var params = { TableName: 'Dex' };
+dynamodb.scan(params, function(err, data) {
+        if (err) ppJson(err); // an error occurred
+        else ppJson(data); // successful response
+});

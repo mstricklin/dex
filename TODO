@@ -1,0 +1,18 @@
+install boto3 on dex-ls
+
+object-ify login
+           query
+
+parameterize credentials
+             depth of store
+	     recipients
+	     query frequency
+	     alert rules
+
+objectify result, transforming fields
+serialize into/out of local rep
+objectify result stashing in dynamo
+objectify result stashing local heap
+re-populate local store at start-up (parameterize depth)
+
+step query rate after first q, based on ts of last result

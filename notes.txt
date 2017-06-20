@@ -1,0 +1,44 @@
+authenticate, then query
+
+how often re-authenticate?
+what does a failed query look like? (400?)
+
+ST system time
+DT display time
+TA is a time offset, multiply by 1000 and subtract it from the time (so subtracting a negative in this example, which is really adding)
+
+WT = ???
+
+{"DT":"\/Date(1495733502000-0700)\/",
+    "ST":"\/Date(1495737023000)\/",
+    "Trend":4,
+    "Value":76,
+    "WT":"\/Date(1495726356000)\/"},
+
+    time of read Thu May 25 10:38:26 CDT 2017
+DT 1495733502000 / 1000 = 1495733502 = Thu May 25 12:31:42 CDT 2017 +2h
+                            -7h = Thu May 25 05:31:42 CDT 2017
+ST 1495737023000 / 1000 = 1495737023 = Thu May 25 13:30:23 CDT 2017 +3h
+WT 1495726356000 / 1000 = 1495726356 = Thu May 25 10:32:36 CDT 2017
+
+
+DT 1495333623000-0700  = Sat May 20 21:27:03 CDT 2017 +2h
+                            -7h = Sat May 20 14:27:03 CDT 2017
+ST 1495337144000       = Sat May 20 22:25:44 CDT 2017 +3h
+WT 1495326471000       = Sat May 20 19:27:51 CDT 2017
+
+
+Trend 3 = angle up
+Trend 4 = flat
+
+Trend 0 = 
+Trend 1 = double up
+Trend 2 = up
+Trend 3 = angle up
+Trend 4 = flat
+Trend 5 = angle down
+Trend 6 = down
+Trend 7 = double down
+Trend 8 = no trend
+Trend 9 = unavailable
+
